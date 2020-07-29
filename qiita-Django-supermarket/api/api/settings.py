@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'apps.users',
+    'apps.goods',
+    'apps.trade',
+    'apps.user_operation',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Additional original user model
+AUTH_USER_MODEL = 'users.UserProfile'
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
